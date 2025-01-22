@@ -1,0 +1,36 @@
+.tiptap h1 {
+  font-size: 40px;
+}
+
+.tiptap h2 {
+  font-size: 32px;
+}
+
+.tiptap h3 {
+  font-size: 24px;
+}
+
+.tiptap ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.tiptap ol li {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.tiptap a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.tiptap pre {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ProseMirror:focus {
+  outline: none;
+}

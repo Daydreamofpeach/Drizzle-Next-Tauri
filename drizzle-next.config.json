@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "packageManager": "pnpm",
+  "latest": false,
+  "dbDialect": "sqlite",
+  "dbPackage": "better-sqlite3",
+  "pkStrategy": "uuidv4",
+  "authEnabled": true,
+  "authSolution": "authjs",
+  "authProviders": [
+    "credentials"
+  ],
+  "adminEnabled": true,
+  "install": true,
+  "pluralizeEnabled": true
+}

@@ -1,0 +1,21 @@
+import { ModeToggle } from "@/components/mode-toggle";
+import Link from "next/link";
+export function Header() {
+  return (
+    <header className="sm:border-b w-full mt-5 px-2 sm:mt-0 border-border ">
+      <div className="container mx-auto flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between items-center sm:h-14">
+        <div className="flex items-center">
+          <Link href="/" className="font-bold font-mono">
+            drizzle-next
+          </Link>
+        </div>
+        <div>
+          <Link href="/signin">Sign In</Link>
+          <div className="ml-5 inline-block">
+            <ModeToggle />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
