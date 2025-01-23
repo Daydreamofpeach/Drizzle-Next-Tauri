@@ -1,18 +1,44 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ Configured With [Drizzle-Next] [https://github.com/drizzle-next/drizzle-next/tree/main]
+And [Tauri] [https://v2.tauri.app/]
+
+Tech Stack 
+
+ NextJs          : "15.1.5",
+ React           : "^19.0.0",
+ Tailwindcss     : "^3.4.17",
+ Typescript      : "^5.7.3"
+ Drizzle         : "0.38.1",
+ Better-Sqlite3  :"7.6.12",
+ Tauri           :"^2.2.5",
+
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+
+cd my-app
+pnpm i  
+## This Should install the project. 
+pnpm drizzle-kit generate
+## After Installing run generate to populate the sqlite file. If You Continue Using Drizzle-next to scaffold this command will be used again
+pnpm drizzle-kit migrate
+## After Installing run generate to populate the sqlite file. If You Continue Using Drizzle-next to scaffold this command will be used again
+pnpx tsx scripts/create-user email@address.com password123
+## Now Create a new user replacing the above email and password with your own 
+pnpx tsx scripts/grant-admin.ts email@address.com
+## finally grant the email address admin usage for the app. you can omit this if you don't want the user to be admin 
 pnpm dev
-# or
-bun dev
-```
+## run the dev server it should be http://localhost:3000 
+## Open a new terminal shell, cd my-app and ensure the dev server is still running
+pnpm run tauri dev
+## Running this command will build the app into a tauri build and launch the dev server it will expect the http://localhost:3000 dev to be running
+```bash
+
+
+
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
